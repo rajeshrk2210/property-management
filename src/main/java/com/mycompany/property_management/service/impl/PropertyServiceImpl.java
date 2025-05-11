@@ -2,7 +2,7 @@ package com.mycompany.property_management.service.impl;
 
 import com.mycompany.property_management.converter.PropertyConverter;
 import com.mycompany.property_management.dto.PropertyDTO;
-import com.mycompany.property_management.dto.entity.PropertyEntity;
+import com.mycompany.property_management.entity.PropertyEntity;
 import com.mycompany.property_management.repository.PropertyRepository;
 import com.mycompany.property_management.service.PropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,8 +56,6 @@ public class PropertyServiceImpl implements PropertyService {
             PropertyEntity pe = optEn.get(); // data from database
             pe.setTitle(propertyDTO.getTitle());
             pe.setAddress(propertyDTO.getAddress());
-            pe.setOwnerEmail(propertyDTO.getOwnerEmail());
-            pe.setOwnerName(propertyDTO.getOwnerName());
             pe.setPrice(propertyDTO.getPrice());
             pe.setDescription(propertyDTO.getDescription());
             dto = propertyConverter.convertEntityToDTO(pe);

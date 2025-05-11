@@ -1,4 +1,4 @@
-package com.mycompany.property_management.dto.entity;
+package com.mycompany.property_management.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -17,9 +17,6 @@ public class PropertyEntity {
     @Column(name = "PROPERTY_TITLE", nullable = false)
     private String title;
     private String description;
-    private String ownerName;
-    @Column(name = "EMAIL")
-    private String ownerEmail;
     private Double price;
     private String address;
 
